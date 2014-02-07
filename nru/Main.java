@@ -26,8 +26,8 @@ public class Main extends Thread{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		instructions.setBackground(Color.LIGHT_GRAY);
         instructions.append("Instruções:\n");
-        instructions.append(" : 'i' + espaço + id\n");
-        instructions.append(" : 'r' + espaço + id\n");
+        instructions.append(" Referenciar página virtual n : 'r' + espaço + n\n");
+        instructions.append(" Modificar página virtual n : 'm' + espaço + n\n");
         instructions.append(" Sair: 'e'\n");
         instructions.setEditable(false);
 		textField.setEditable(true);
@@ -36,19 +36,22 @@ public class Main extends Thread{
             public void actionPerformed(ActionEvent e) {
             	String input = textField.getText();
             	switch(input.charAt(0)){
-            		case 'i':{
-            			String[] strs = input.split(" ");
-            			if(strs.length>1){
-	            			
-            			}
-                        break;
-            		}
             		case 'r':{
             			String[] strs = input.split(" ");
             			if(strs.length>1){
+            				int id = Integer.parseInt(strs[1]);
+	                        if(id>=0) {    		    		
+	                            //TODO
+	                        }
+            			}
+                        break;
+            		}
+            		case 'm':{
+            			String[] strs = input.split(" ");
+            			if(strs.length>1){
 	            			int id = Integer.parseInt(strs[1]);
-	                        if(id>0) {    		    		
-	                            
+	                        if(id>=0) {    		    		
+	                            //TODO
 	                        }
             			}
                         break;
