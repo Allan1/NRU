@@ -21,8 +21,10 @@ public class Memory {
 		data = new Object[size][2];
 		table = new JTable(data, columnNames);
 		table.setFillsViewportHeight(true);
+		table.setEnabled(false);
 		scrollPane = new JScrollPane(table);
 		frame.add(scrollPane);
+		frame.repaint();
 	}
 	
 	public void addMAddress(int index, MemoryAddress a){
@@ -30,5 +32,6 @@ public class Memory {
 		data[index][0] = a.index;
 		data[index][1] = a.used;
 		System.out.println(index);
+		frame.repaint();
 	}
 }
