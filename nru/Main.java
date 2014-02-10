@@ -12,6 +12,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class Main extends Thread{
+	//teste
 	static JFrame frame = new JFrame("Not Recent Used");
 	static JTextField textField = new JTextField(40);
 	static JTextArea instructions = new JTextArea(5, 60);
