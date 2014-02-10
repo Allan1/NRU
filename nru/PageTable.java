@@ -23,8 +23,10 @@ public class PageTable {
 		data = new Object[size][6];
 		table = new JTable(data, columnNames);
 		table.setFillsViewportHeight(true);		
+		table.setEnabled(false);
 		scrollPane = new JScrollPane(table);        
         frame.add(scrollPane);
+        frame.repaint();
 	}
 	
 	public void addPage(int index,Page p){
@@ -35,5 +37,6 @@ public class PageTable {
 		data[index][3] = p.present;
 		data[index][4] = p.pageFrame;
 		data[index][5] = p.protection;
+		frame.repaint();
 	}
 }
